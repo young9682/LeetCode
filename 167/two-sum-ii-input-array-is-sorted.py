@@ -15,13 +15,13 @@ class Solution0:
 class Solution1:
     def twoSum(self, numbers: list[int], target: int) -> list[int]:
         left, right = 0, len(numbers) - 1
-        while left < right:
-            sum = numbers[left] + numbers[right]
-            if sum == target:
+        while not left == right:
+            current_sum = numbers[left] + numbers[right]
+            if current_sum == target:
                 return [left+1, right+1]
-            elif sum > target:
+            elif current_sum > target:
                 right -= 1  
-            elif sum < target:
+            elif current_sum < target:
                 left += 1
             
         
